@@ -1,0 +1,11 @@
+.header {
+    background-color: rgb(33, 33, 33);
+};
+
+.headerText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;  
+    color: white;
+};
