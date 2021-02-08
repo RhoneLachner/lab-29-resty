@@ -1,0 +1,25 @@
+.header {
+    background-color: rgb(33, 33, 33);
+    .headerText {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 1rem;  
+        padding: 1rem;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.requestView {
+    display: block;
+    text-align: center;
+    border: rgb(33, 33, 33);
+    padding: 5rem;
+    input {
+        display: block;
+        justify-content: center;
+        justify-self: center;
+        text-align: center;
+    }
+    
+}
