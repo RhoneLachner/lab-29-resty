@@ -1,5 +1,12 @@
 import React from 'react';
+import RestyHome from '../../containers/RestyHome';
+import '../sectionView/Header.css';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <RestyHome />
+    </>
+  
+  );
 }
