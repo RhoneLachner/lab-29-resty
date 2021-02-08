@@ -45,7 +45,7 @@
     display: inline-block;
     justify-self: left;
     background-color: #e0e0e0;
-    
+
 }
 
 .radioButtons {
@@ -88,4 +88,11 @@ justify-content: left;
         border-style: none;
     }
     
+}
+
+textarea {
+    display: block;
+    justify-self: end;
+    height: 4rem;
+    width: 15rem;
 }

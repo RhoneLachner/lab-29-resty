@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../../containers/RestyHome.css';
 
-const RequestView = ({ radio, radioChange }) => (
+const RequestView = ({ onChange, textBody, method }) => (
   <>
     <div className={styles.requestView}>
 
       <form>
-        <input type="text" placeholder="http://api.url.here"></input>
+        <input type="text" name="url" placeholder="http://api.url.here"></input>
         <button>GO!</button>
         {/* RADIO BUTTONS HERE */}
         <div className={styles.radioButtons}>
@@ -16,8 +16,8 @@ const RequestView = ({ radio, radioChange }) => (
             type="radio" 
             name="method" 
             value="get" 
-            onChange={radioChange}
-            checked={radio === 'GET'}
+            onChange={onChange}
+            checked={method === 'GET'}
           />
           <label htmlFor="get">GET</label>
 
@@ -25,8 +25,8 @@ const RequestView = ({ radio, radioChange }) => (
             type="radio" 
             name="method" 
             value="post" 
-            onChange={radioChange}
-            checked={radio === 'POST'}
+            onChange={onChange}
+            checked={method === 'POST'}
           />
           <label htmlFor="get">POST</label>
 
@@ -34,8 +34,8 @@ const RequestView = ({ radio, radioChange }) => (
             type="radio" 
             name="method" 
             value="put" 
-            onChange={radioChange}
-            checked={radio === 'PUT'}
+            onChange={onChange}
+            checked={method === 'PUT'}
           />
           <label htmlFor="get">PUT</label>
 
@@ -43,20 +43,27 @@ const RequestView = ({ radio, radioChange }) => (
             type="radio" 
             name="method" 
             value="delete" 
-            onChange={radioChange}
-            checked={radio === 'DELETE'}
+            onChange={onChange}
+            checked={method === 'DELETE'}
           />
           <label htmlFor="get">DELETE</label>
 
         </div>
+        <textarea
+          placeholder="JSON Here"
+          value={textBody}
+          onChange={onChange}
+        ></textarea>
+
       </form>
     </div>
   </>
 );
 
 RequestView.propTypes = {
-  radio: PropTypes.string.isRequired,
-  radioChange: PropTypes.func.isRequired
+  method: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  textBody: PropTypes.string.isRequired,
 };
 
 export default RequestView;
