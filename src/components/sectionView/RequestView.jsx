@@ -6,14 +6,11 @@ export default class RequestView extends Component {
     return (
       <>
         <div className={styles.requestView}>
-          <div>
-            <h2>Request Section. 
-            URL input and radio buttons here with GO button</h2>       
-          </div>
+         
 
           <form>
-            <input type="text" placeholder="http://api.url"></input>
-            
+            <input type="text" placeholder="http://api.url.here"></input>
+            <button>GO!</button>
           </form>
         </div>
       </>
