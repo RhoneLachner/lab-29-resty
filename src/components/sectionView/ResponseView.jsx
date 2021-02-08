@@ -5,6 +5,9 @@ export default class ResponseView extends Component {
     return (
       <div>
         <h2>Response Section. Text output here.</h2>
+        <span>
+          
+        </span>
       </div>
     );
   }
