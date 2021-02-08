@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { RequestFunc } from '../services/RequestFunc';
+// import { RequestFunc } from '../services/RequestFunc';
 import Header from '../components/sectionView/Header';
 // import HistoryView from '../components/sectionView/HistoryView';
 import RequestView from '../components/sectionView/RequestView';
