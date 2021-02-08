@@ -12,20 +12,20 @@ export default class RequestView extends Component {
             <button>GO!</button>
 
             {/* RADIO BUTTONS HERE */}
-            <div className={styles.radioDiv}>
+            <div className={styles.radioButtons}>
 
               <input type="radio" name="method" value="get" />
               <label htmlFor="get">GET</label>
 
               <input type="radio" name="method" value="post" />
-              <label htmlFor="get">GET</label>
+              <label htmlFor="get">POST</label>
 
               <input type="radio" name="method" value="put" />
-              <label htmlFor="get">GET</label>
+              <label htmlFor="get">PUT</label>
 
               <input type="radio" name="method" value="delete" />
-              <label htmlFor="get">GET</label>
-              
+              <label htmlFor="get">DELETE</label>
+
             </div>
 
           </form>
