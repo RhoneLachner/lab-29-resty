@@ -2,13 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../../containers/RestyHome.css';
 
-const RequestView = ({ onChange, textBody, method }) => (
+const RequestView = ({ onClick, onChange, textBody, method, url }) => (
   <>
     <div className={styles.requestView}>
 
       <form>
-        <input type="text" name="url" placeholder="http://api.url.here"></input>
-        <button>GO!</button>
+        <input type="text" 
+          name="url" 
+          value={url} 
+          onChange={onChange}
+          placeholder="http://api.url.here" 
+        />
+        <button onClick={onClick} htmlFor="url">GO!</button>
         {/* RADIO BUTTONS HERE */}
         <div className={styles.radioButtons}>
 
@@ -63,7 +68,9 @@ const RequestView = ({ onChange, textBody, method }) => (
 RequestView.propTypes = {
   method: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   textBody: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 };
 
 export default RequestView;
