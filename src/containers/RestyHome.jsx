@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { RequestFunc } from '../services/RequestFunc';
 import Header from '../components/sectionView/Header';
 // import HistoryView from '../components/sectionView/HistoryView';
 import RequestView from '../components/sectionView/RequestView';
@@ -15,7 +16,8 @@ export default class RestyHome extends Component {
 
   handleChange = (e) => {
     e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value });
+    
+    this.setState({ [e.target.url]: e.target.value });
   } 
 
   handleClick = (e) => {
